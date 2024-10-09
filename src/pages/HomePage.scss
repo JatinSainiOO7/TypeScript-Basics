@@ -1,0 +1,142 @@
+// Variables
+$primary-color: #007acc;
+$secondary-color: #ffeb3b;
+$gradient-background: linear-gradient(135deg, $primary-color 0%, #00d4ff 100%);
+$text-color: white;
+$text-color-dark: #333;
+$hover-color: #ffd600;
+
+// General Styles
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: $gradient-background;
+  color: $text-color;
+}
+
+.home-header {
+  text-align: center;
+}
+
+.book-title {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  transition: all 0.3s ease-in-out;
+
+  .highlight {
+    color: $text-color;
+    position: relative;
+    cursor: pointer;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: $secondary-color;
+
+      &::before {
+        width: 100%;
+      }
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 0;
+      height: 3px;
+      background-color: $secondary-color;
+      transition: width 0.3s ease-in-out;
+    }
+  }
+}
+
+.intro {
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+
+.start-btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  background-color: $secondary-color;
+  color: $primary-color;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: $hover-color;
+  }
+}
+
+// Features Section
+.features-section {
+  margin-top: 50px;
+  text-align: center;
+
+  .section-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+
+  .features-list {
+    list-style: none;
+    padding: 0;
+    font-size: 1.2rem;
+    line-height: 2;
+
+    li {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+// Footer Section
+.home-footer {
+  margin-top: 50px;
+  text-align: center;
+
+  .chapter-links {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+
+    .chapter-link {
+      margin: 0 15px;
+      font-size: 1.1rem;
+      color: $secondary-color;
+      text-decoration: none;
+      position: relative;
+      transition: color 0.3s;
+
+      &:hover {
+        color: $hover-color;
+
+        &::after {
+          width: 100%;
+        }
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background-color: $secondary-color;
+        transition: width 0.3s ease;
+      }
+    }
+  }
+}

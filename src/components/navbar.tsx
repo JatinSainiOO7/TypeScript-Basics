@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import '../styles/main.scss';
+import { Link } from 'react-router-dom';
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -12,9 +13,9 @@ const Navbar: React.FC = () => {
     <nav className="navbar">
       <div className="nav-logo">TypeScript Book</div>
       <div className={`nav-links ${isOpen ? 'open' : ''}`}>
-        <a href="#home" className="nav-link">Home</a>
-        <a href="#about" className="nav-link">About</a>
-        <a href="#contact" className="nav-link">Contact</a>
+        <Link to="/" className="nav-link">Home</Link>
+        <Link to="/about" className="nav-link">About</Link>
+        <Link to="/contact" className="nav-link">Contact</Link>
       </div>
       <div className="hamburger" onClick={toggleMenu}>
         <div className={`bar ${isOpen ? 'open' : ''}`}></div>

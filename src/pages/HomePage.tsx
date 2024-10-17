@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './HomePage.scss';
 import NavBar from '../components/navbar.tsx'
 
@@ -15,7 +16,9 @@ const HomePage: React.FC = () => {
         <p className="intro">
           A comprehensive guide that will take you from zero to hero in TypeScript, covering everything from the basics to advanced techniques.
         </p>
-        <button className="start-btn">Start Learning</button>
+        <Link to="/chapters">
+          <button className="start-btn">Start Learning</button>
+        </Link>
       </header>
 
       <section className="features-section">
@@ -28,15 +31,6 @@ const HomePage: React.FC = () => {
           <li>✅ Practical Applications and Projects</li>
         </ul>
       </section>
-
-      <footer className="home-footer">
-        <p>Explore Chapters</p>
-        <nav className="chapter-links">
-          <a href="#chapter1" className="chapter-link">Chapter 1: Introduction</a>
-          <a href="#chapter2" className="chapter-link">Chapter 2: Basics</a>
-          <a href="#chapter3" className="chapter-link">Chapter 3: Advanced Types</a>
-        </nav>
-      </footer>
     </div>
     </>
   );

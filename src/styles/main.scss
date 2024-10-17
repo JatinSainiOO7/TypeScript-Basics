@@ -4,19 +4,29 @@ $secondary-color: #3a82ff;
 $text-color-light: white;
 $nav-background: #333;
 $hover-color: #e1e1e1;
+$secondary-color: #ffeb3b;
+$text-color-light: white;
+$text-color-dark: #333;
+$card-bg: #f9f9f9;
+$card-shadow: rgba(0, 0, 0, 0.1);
+
 
 .navbar {
+  width: 100%;
+  position: fixed;
+  z-index: 100;
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: $nav-background;
-  padding: 15px;
+  padding: 10px;
   color: $text-color-light;
+  margin-bottom: 5rem;
 
   .nav-logo {
     font-size: 1.5rem;
     font-weight: bold;
-    color: $secondary-color;
+    color: $primary-color;
   }
 
   .nav-links {
@@ -24,7 +34,7 @@ $hover-color: #e1e1e1;
     align-items: center;
 
     .nav-link {
-      margin: 0 15px;
+      margin: 0 20px;
       color: $text-color-light;
       text-decoration: none;
       position: relative;
@@ -46,7 +56,7 @@ $hover-color: #e1e1e1;
         left: 0;
         width: 0;
         height: 2px;
-        background-color: $secondary-color;
+        background-color: $primary-color;
         transition: width 0.3s ease;
       }
     }
@@ -55,6 +65,7 @@ $hover-color: #e1e1e1;
   .hamburger {
     display: none;
     cursor: pointer;
+    margin-right: 10px;
     flex-direction: column;
     justify-content: space-between;
     height: 20px;
@@ -67,7 +78,7 @@ $hover-color: #e1e1e1;
       transition: all 0.3s ease;
 
       &.open {
-        background-color: $secondary-color;
+        background-color: $primary-color;
       }
     }
   }
@@ -83,7 +94,7 @@ $hover-color: #e1e1e1;
       background-color: $nav-background;
       flex-direction: column;
       align-items: center;
-      padding: 10px 0;
+      padding: 10px 0px;
 
       &.open {
         display: flex;
@@ -99,3 +110,165 @@ $hover-color: #e1e1e1;
     }
   }
 }
+
+.chapters-container {
+  padding: 5%;
+  text-align: center;
+  background-color: #dfdfdf;
+}
+
+.chapters-title {
+  font-size: 2.5rem;
+  color: $primary-color;
+  margin-bottom: 40px;
+}
+
+.chapter-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 10px;
+}
+
+.chapter-card {
+  background-color: $card-bg;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px $card-shadow;
+  border: #333 2px solid;
+  transition: ease-in-out 0.2s;
+  
+  &:hover {
+    scale: 105%;
+    border: #3a82ff solid 2px;
+    box-shadow: 0 8px 16px $card-shadow;
+  }
+
+  .chapter-title {
+    font-size: 1.5rem;
+    color: $primary-color;
+    margin-bottom: 10px;
+  }
+
+  .chapter-description {
+    font-size: 1rem;
+    color: $text-color-dark;
+    margin-bottom: 15px;
+  }
+
+  .chapter-link {
+    font-size: 1rem;
+    color: $secondary-color;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: $primary-color;
+      text-decoration: underline;
+    }
+  }
+}
+
+// Responsive layout for smaller screens
+@media (max-width: 768px) {
+  .chapters-container {
+    padding: 20px;
+  }
+
+  .chapters-title {
+    font-size: 2rem;
+  }
+
+  .chapter-card {
+    padding: 15px;
+  }
+
+  .chapter-title {
+    font-size: 1.2rem;
+  }
+
+  .chapter-description {
+    font-size: 0.9rem;
+  }
+
+  .chapter-link {
+    font-size: 0.9rem;
+  }
+}
+
+.chapter-container {
+  padding: 2rem;
+  background-color: #f8f9fa;
+  color: #333;
+  line-height: 1.6;
+}
+
+.chapter-title {
+  font-size: 2.5rem;
+  color: #007acc;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.chapter-content {
+  h2 {
+    font-size: 1.8rem;
+    margin-top: 1.5rem;
+    color: #005bb5;
+  }
+
+  p {
+    font-size: 1.1rem;
+    margin: 1rem 0;
+  }
+
+  ul, ol {
+    margin: 1rem 0;
+    padding-left: 2rem;
+
+    li {
+      font-size: 1rem;
+      margin-bottom: 0.5rem;
+    }
+  }
+
+  pre {
+    background-color: #f1f1f1;
+    padding: 0.8rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    white-space: pre-wrap;
+  }
+
+  table {
+    width: 100%;
+    margin: 1.5rem 0;
+    border-collapse: collapse;
+
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.75rem;
+      text-align: left;
+    }
+
+    th {
+      background-color: #007acc;
+      color: white;
+    }
+
+    td {
+      background-color: #f9f9f9;
+    }
+  }
+
+  a {
+    color: #005bb5;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+

@@ -5,9 +5,9 @@ import { Link } from 'react-router-dom';
 import Navbar from './navbar';
 const chapters = [
     { id: 1, title: 'Introduction to TypeScript', description: 'Learn the basics of TypeScript and why it’s useful.', to: '/chapter-1' },
-    { id: 2, title: 'TypeScript Types', description: 'Understand types, interfaces, and how TypeScript handles them.',  to: '/chapter-1' },
-    { id: 3, title: 'Functions in TypeScript', description: 'Learn how to define and use functions with TypeScript.',  to: '/chapter-1' },
-    { id: 4, title: 'Generics and Interfaces', description: 'Master generics and interfaces to write flexible, reusable code.',  to: '/chapter-1' },
+    { id: 2, title: 'TypeScript Types', description: 'Understand types, interfaces, and how TypeScript handles them.',  to: '/chapter-2' },
+    { id: 3, title: 'Functions in TypeScript', description: 'Learn how to define and use functions with TypeScript.',  to: '/chapter-3' },
+    { id: 4, title: 'Generics and Interfaces', description: 'Master generics and interfaces to write flexible, reusable code.',  to: '/chapter-4' },
     { id: 5, title: 'TypeScript and React', description: 'How to use TypeScript with React for robust web applications.',  to: '/chapter-1' },
     { id: 6, title: 'Advanced TypeScript Features', description: 'Explore advanced concepts like mapped types and conditional types.',  to: '/chapter-1' },
     { id: 7, title: 'TypeScript with Node.js', description: 'Using TypeScript in a Node.js environment for back-end development.',  to: '/chapter-1' },
